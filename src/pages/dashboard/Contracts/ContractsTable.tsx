@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Button, Card, Table } from "react-bootstrap";
-import Feather from "feather-icons-react"
-
+import { Card } from "react-bootstrap";
 import classNames from "classnames";
 import { useAsyncDebounce } from "react-table";
-import Pagination from "../../../components/Pagination";
 import { records as data, } from "./data";
+// components 
 import CustomeTable from "../../../components/CustomTable";
 
 const ContractsTable = (props: any) => {
