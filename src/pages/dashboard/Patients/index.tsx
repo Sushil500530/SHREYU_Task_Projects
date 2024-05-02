@@ -3,7 +3,6 @@ import { useState } from "react";
 // components 
 import PageTitle from "../../../components/PageTitle";
 import MidItemBar from "../Contracts/MidItemBar";
-import ContractsTable from "../Contracts/ContractsTable";
 import PatientsImageLoad from "./PatientsImageLoad";
 import PatientsTable from "./PatientsTable";
 

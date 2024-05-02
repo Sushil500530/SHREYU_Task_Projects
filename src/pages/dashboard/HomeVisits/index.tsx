@@ -1,10 +1,10 @@
-
-import { useState } from "react";
-import PageTitle from "../../../components/PageTitle";
 import { Button, Card, Col, Row } from "react-bootstrap";
+import { useState } from "react";
+// components 
+import PageTitle from "../../../components/PageTitle";
 import MidItemBar from "../Contracts/MidItemBar";
-import PatientsTable from "../Patients/PatientsTable";
 import Filtered from "./Filtered";
+import HomeVisitsTable from "./HomeVisitsTable";
 
 const HomeVisitsDashboard = () => {
     const [newTaskDetails, setNewTaskDetails] = useState<any>(null);
@@ -50,7 +50,7 @@ const HomeVisitsDashboard = () => {
                             <Filtered />
                         </Card.Body>
                         <MidItemBar />
-                        <PatientsTable />
+                        <HomeVisitsTable />
                     </Card>
                 </Col>
             </Row>

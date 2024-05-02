@@ -1,0 +1,39 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switch-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .switch-label:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+  }
+  
+  .switch:checked + .switch-label {
+    background-color: #2ecc71;
+  }
+  
+  .switch:checked + .switch-label:before {
+    transform: translateX(20px);
+  }
+  

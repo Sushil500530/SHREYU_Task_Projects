@@ -12,91 +12,56 @@ const ContractsTable = (props: any) => {
     // dummy records
     const columns = [
         {
-          Header: "#",
-          accessor: "#",
-          sort: true,
+            Header: "#",
+            accessor: "#",
+            sort: true,
         },
         {
-          Header: "Title",
-          accessor: "title",
-          sort: true,
+            Header: "Title",
+            accessor: "title",
+            sort: true,
         },
         {
-          Header: "Discount",
-          accessor: "discount",
-          sort: false,
+            Header: "Discount",
+            accessor: "discount",
+            sort: false,
         },
         {
-          Header: "Action",
-          accessor: "action",
-          sort: true,
+            Header: "Action",
+            accessor: "action",
+            sort: true,
         },
-      ];
-      
-      const sizePerPageList = [
+    ];
+
+    const sizePerPageList = [
         {
-          text: "8",
-          value: 8,
-        },
-        {
-          text: "15",
-          value: 15,
+            text: "8",
+            value: 8,
         },
         {
-          text: "25",
-          value: 25,
+            text: "15",
+            value: 15,
         },
         {
-          text: "All",
-          value: data.length,
+            text: "25",
+            value: 25,
         },
-      ];
+        {
+            text: "All",
+            value: data.length,
+        },
+    ];
     return (
         <>
             <Card className="px-3 border-0">
-                <div className="">
-                    {/* <Table className="mb-0 border" striped>
-                        <thead className="bg-primary text-white">
-                            <tr>
-                                <th className="border-1" style={{ width: "0px" }}>#</th>
-                                <th className="border-1" style={{ width: "45%" }} scope="col">Title</th>
-                                <th className="border-1" style={{ width: "45%" }} scope="col">Discount</th>
-                                <th className="border-1" style={{ width: "10%" }} scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody className="border-1">
-                            {(records || []).map((record, index) => {
-                                return (
-                                    <tr key={index}>
-                                        <th scope="row" className="border-1">{record.id}</th>
-                                        <td className="border-1">{record.firstName}</td>
-                                        <td className="border-1">{record.lastName}</td>
-                                        <td className="border-1 d-flex align-items-center justify-content-center gap-2">
-
-                                            <>
-                                                <Button variant="primary" className="btn-sm d-flex align-items-center justify-content-center " style={{ width: "30px", height: "30px", borderRadius: "100%" }}>
-                                                    <i className="uil uil-edit" style={{ fontSize: "14px" }}></i>
-                                                </Button>
-                                                <Button variant="danger" className="btn-sm d-flex align-items-center justify-content-center" style={{ width: "30px", height: "30px", borderRadius: "100%" }}>
-                                                    <i className="uil uil-trash-alt" style={{ fontSize: "14px" }}></i>
-
-                                                </Button>
-                                            </>
-                                        </td>
-                                    </tr>
-                                );
-                            })}
-                        </tbody>
-                    </Table> */}
-                    <ContractCustomeTable
-                        columns={columns}
-                        data={data}
-                        pageSize={8}
-                        sizePerPageList={sizePerPageList}
-                        isSortable={true}
-                        pagination={true}
-                    />
-                </div>
+                <ContractCustomeTable
+                    columns={columns}
+                    data={data}
+                    pageSize={8}
+                    sizePerPageList={sizePerPageList}
+                    isSortable={true}
+                    pagination={true}
+                />
             </Card>
         </>
     );
