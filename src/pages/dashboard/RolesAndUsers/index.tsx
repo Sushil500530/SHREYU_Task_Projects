@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import PageTitle from "../../../components/PageTitle";
 import MidItemBar from "../Contracts/MidItemBar";
-import ContractsTable from "../Contracts/ContractsTable";
+import UsersTable from "./Users/UsersTable";
 
-const RoleAndUsersDashboard = () => {
+const UsersDashboard = () => {
     const [newTaskDetails, setNewTaskDetails] = useState<any>(null);
     // add task 
     const newTask = (status: string, queue: string) => {
@@ -45,7 +45,7 @@ const RoleAndUsersDashboard = () => {
                         </Card.Body>
                         <hr className="my-0 mb-3" />
                         <MidItemBar />
-                        <ContractsTable />
+                        <UsersTable />
                     </Card>
                 </Col>
             </Row>
@@ -53,4 +53,4 @@ const RoleAndUsersDashboard = () => {
     );
 };
 
-export default RoleAndUsersDashboard;
+export default UsersDashboard;

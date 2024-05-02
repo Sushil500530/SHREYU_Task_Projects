@@ -3,7 +3,7 @@ import { Navigate, Route, RouteProps } from "react-router-dom";
 
 // components
 import PrivateRoute from "./PrivateRoute";
-import RolesDashboard from "../pages/dashboard/RolesAndUsers/Roles";
+
 // import Root from "./Root";
 
 // lazy load all the views
@@ -41,6 +41,12 @@ const RoleAndUsersDashboard = React.lazy(
 );
 const SettingsDashboard = React.lazy(
   () => import("../pages/dashboard/Settings")
+);
+const RolesDashboard = React.lazy(
+  () => import("../pages/dashboard/RolesAndUsers/Roles")
+);
+const UsersDashboard = React.lazy(
+  () => import("../pages/dashboard/RolesAndUsers")
 );
 
 
@@ -175,7 +181,7 @@ const dashboardRoutes: RoutesProps = {
         {
           path: "/dashboard/roles-&-users/users",
           name: "Users",
-          element: <EmailDetail />,
+          element: <UsersDashboard />,
           route: PrivateRoute,
         },
       ],

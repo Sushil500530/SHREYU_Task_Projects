@@ -5,8 +5,7 @@ import { useAsyncDebounce } from "react-table";
 
 // components 
 import { records as data, } from "./data";
-import CustomRoleShowTable from "./CustomRoleShowTable";
-
+import CustomUsersShowTable from "./CustomUsersShowTable";
 
 
 
@@ -18,8 +17,18 @@ const columns = [
         sort: true,
     },
     {
-        Header: "Role Name",
-        accessor: "roleName",
+        Header: "Name",
+        accessor: "name",
+        sort: true,
+    },
+    {
+        Header: "Email",
+        accessor: "email",
+        sort: true,
+    },
+    {
+        Header: "Role",
+        accessor: "role",
         sort: true,
     },
     {
@@ -47,12 +56,12 @@ const sizePerPageList = [
         value: data.length,
     },
 ];
-const RoleTable = () => {
+const UsersTable = () => {
     return (
         <>
             <Card className="px-3 border-0">
                 <div className="">
-                    <CustomRoleShowTable
+                    <CustomUsersShowTable
                         columns={columns}
                         data={data}
                         pageSize={8}
@@ -66,7 +75,7 @@ const RoleTable = () => {
     );
 };
 
-export default RoleTable;
+export default UsersTable;
 
 
 // Define a default UI for filtering
