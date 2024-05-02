@@ -6,6 +6,8 @@ import { useAsyncDebounce } from "react-table";
 // components 
 import { records as data, } from "./data";
 import ContractCustomeTable from "../../Contracts/ContractCustomeTable";
+import CustomTable from "../../../../components/CustomTable";
+import CustomRoleShowTable from "./CustomRoleShowTable";
 
 
 
@@ -18,38 +20,8 @@ const columns = [
         sort: true,
     },
     {
-        Header: "Code",
-        accessor: "code",
-        sort: true,
-    },
-    {
-        Header: "Name",
-        accessor: "name",
-        sort: false,
-    },
-    {
-        Header: "Phone",
-        accessor: "phone",
-        sort: true,
-    },
-    {
-        Header: "Email",
-        accessor: "email",
-        sort: true,
-    },
-    {
-        Header: "Total",
-        accessor: "total",
-        sort: true,
-    },
-    {
-        Header: "Paid",
-        accessor: "paid",
-        sort: true,
-    },
-    {
-        Header: "Due",
-        accessor: "due",
+        Header: "Role Name",
+        accessor: "role name",
         sort: true,
     },
     {
@@ -82,7 +54,7 @@ const RoleTable = () => {
         <>
             <Card className="px-3 border-0">
                 <div className="">
-                    <ContractCustomeTable
+                    <CustomRoleShowTable
                         columns={columns}
                         data={data}
                         pageSize={8}
