@@ -9,7 +9,8 @@ import {
   useExpanded,
 } from "react-table";
 import classNames from "classnames";
-import CustomPagination from "../../../components/CustomePagination";
+import CustomPagination from "../../../components/CustomPagination";
+
 
 // components
 

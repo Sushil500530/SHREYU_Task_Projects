@@ -109,14 +109,14 @@ const ContractsTable = (props: any) => {
                             })}
                         </tbody>
                     </Table> */}
-                    {/* <CustomeTable
+                    <CustomeTable
                         columns={columns}
                         data={data}
                         pageSize={8}
                         sizePerPageList={sizePerPageList}
                         isSortable={true}
                         pagination={true}
-                    /> */}
+                    />
                 </div>
             </Card>
         </>

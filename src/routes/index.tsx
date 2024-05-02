@@ -29,17 +29,17 @@ const AnalyticsDashboard = React.lazy(
 const ContractsDashboard = React.lazy(
   () => import("../pages/dashboard/Contracts")
 );
-const HomeVisitsDashboard = React.lazy(
-  () => import("../pages/dashboard/HomeVisits/")
-);
 const PatientsDashboard = React.lazy(
-  () => import("../pages/dashboard/Patients/")
+  () => import("../pages/dashboard/Patients")
+);
+const HomeVisitsDashboard = React.lazy(
+  () => import("../pages/dashboard/HomeVisits")
 );
 const RoleAndUsersDashboard = React.lazy(
-  () => import("../pages/dashboard/RolesAndUsers/")
+  () => import("../pages/dashboard/RolesAndUsers")
 );
 const SettingsDashboard = React.lazy(
-  () => import("../pages/dashboard/Settings/")
+  () => import("../pages/dashboard/Settings")
 );
 
 
@@ -101,6 +101,7 @@ const AdvancedTables = React.lazy(() => import("../pages/tables/Advanced"));
 // maps
 const GoogleMaps = React.lazy(() => import("../pages/maps/GoogleMaps"));
 const VectorMaps = React.lazy(() => import("../pages/maps/VectorMaps"));
+
 
 export interface RoutesProps {
   path: RouteProps["path"];

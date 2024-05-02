@@ -11,8 +11,8 @@ import {
 import classNames from "classnames";
 
 // components
-import CustomPagination from './CustomePagination';
 import { Button, Table } from "react-bootstrap";
+import CustomPagination from "./CustomPagination";
 
 interface GlobalFilterProps {
   preGlobalFilteredRows: any;
@@ -223,39 +223,6 @@ const CustomTable = (props: TableProps) => {
       )}
 
       <div className="table-responsive">
-        {/* <Table className="mb-0 border" striped>
-          <thead className="bg-primary text-white">
-            <tr>
-              <th className="border-1" style={{ width: "0px" }}>#</th>
-              <th className="border-1" style={{ width: "45%" }} scope="col">Title</th>
-              <th className="border-1" style={{ width: "45%" }} scope="col">Discount</th>
-              <th className="border-1" style={{ width: "10%" }} scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody className="border-1">
-            {(records || []).map((record, index) => {
-              return (
-                <tr key={index}>
-                  <th scope="row" className="border-1">{record.id}</th>
-                  <td className="border-1">{record.firstName}</td>
-                  <td className="border-1">{record.lastName}</td>
-                  <td className="border-1 d-flex align-items-center justify-content-center gap-2">
-
-                    <>
-                      <Button variant="primary" className="btn-sm d-flex align-items-center justify-content-center " style={{ width: "30px", height: "30px", borderRadius: "100%" }}>
-                        <i className="uil uil-edit" style={{ fontSize: "14px" }}></i>
-                      </Button>
-                      <Button variant="danger" className="btn-sm d-flex align-items-center justify-content-center" style={{ width: "30px", height: "30px", borderRadius: "100%" }}>
-                        <i className="uil uil-trash-alt" style={{ fontSize: "14px" }}></i>
-
-                      </Button>
-                    </>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </Table> */}
         <table
           {...dataTable.getTableProps()}
           className={classNames(
@@ -263,44 +230,30 @@ const CustomTable = (props: TableProps) => {
             props["tableClass"]
           )}
         >
-          <thead className=" bg-primary text-white" >
-            {(dataTable.headerGroups || []).map((headerGroup: any) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {(headerGroup.headers || []).map((column: any) => (
-                  <th
-                    {...column.getHeaderProps(
-                      column.sort && column.getSortByToggleProps()
-                    )}
-                    className={classNames({
-                      sorting_desc: column.isSortedDesc === true,
-                      sorting_asc: column.isSortedDesc === false,
-                      sortable: column.sort === true,
-                    })}
-                  >
-                    {column.render("Header")}
-                  </th>
-                ))}
-              </tr>
-            ))}
+          <thead className="bg-primary text-white">
+            <tr>
+              <th className="border-1" style={{ width: "0px" }}>#</th>
+              <th className="border-1" style={{ width: "45%" }}>Title</th>
+              <th className="border-1" style={{ width: "45%" }}>Discount</th>
+              <th className="border-1" style={{ width: "10%" }}>Action</th>
+            </tr>
           </thead>
           <tbody {...dataTable.getTableBodyProps()}>
-            {(rows || []).map((row: any, i: number) => {
+            {(rows || []).map((row: any) => {
               dataTable.prepareRow(row);
               return (
                 <tr {...row.getRowProps()}>
-                  {(row.cells || []).map((cell: any) => {
-                    return (
-                      <td
-                        {...cell.getCellProps([
-                          {
-                            className: cell.column.className,
-                          },
-                        ])}
-                      >
-                        {cell.render("Cell")}
-                      </td>
-                    );
-                  })}
+                  <td  className="border-1">{row.original.id}</td>
+                  <td className="border-1">{row.original.title}</td>
+                  <td className="border-1">{row.original.discount}</td>
+                  <td className="border-1 d-flex align-items-center justify-content-center gap-2">
+                    <Button variant="primary" className="btn-sm d-flex align-items-center justify-content-center " style={{ width: "30px", height: "30px", borderRadius: "100%" }}>
+                      <i className="uil uil-edit" style={{ fontSize: "14px" }}></i>
+                    </Button>
+                    <Button variant="danger" className="btn-sm d-flex align-items-center justify-content-center" style={{ width: "30px", height: "30px", borderRadius: "100%" }}>
+                      <i className="uil uil-trash-alt" style={{ fontSize: "14px" }}></i>
+                    </Button>
+                  </td>
                 </tr>
               );
             })}

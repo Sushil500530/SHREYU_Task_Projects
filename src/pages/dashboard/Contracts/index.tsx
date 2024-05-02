@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 // components
 import { Button, Card, Col, Form, Row, } from "react-bootstrap";
 import PageTitle from '../../../components/PageTitle';
-
-
-
 import ContractsTable, { GlobalFilter } from './ContractsTable';
+
+
+
 
 const columns = [
     {
@@ -112,10 +112,10 @@ const ContractsDashboard = () => {
                                     </p>
                                 </div>
                                 <div className="d-flex justify-content-center align-items-center">
-                                 {/* <GlobalFilter setGlobalFilter={5} searchBoxClass="suhil" /> */}
+                                 <GlobalFilter setGlobalFilter={5} searchBoxClass="suhil" />
                                 </div>
                             </div>
-                            {/* <ContractsTable /> */}
+                            <ContractsTable />
                         </>
 
 
