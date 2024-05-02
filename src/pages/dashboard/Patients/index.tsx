@@ -5,6 +5,7 @@ import PageTitle from "../../../components/PageTitle";
 import MidItemBar from "../Contracts/MidItemBar";
 import ContractsTable from "../Contracts/ContractsTable";
 import PatientsImageLoad from "./PatientsImageLoad";
+import PatientsTable from "./PatientsTable";
 
 
 
@@ -56,7 +57,7 @@ const PatientsDashboard = () => {
                             <PatientsImageLoad />
                         </Card.Body>
                         <MidItemBar />
-                        <ContractsTable />
+                        <PatientsTable />
                     </Card>
                 </Col>
             </Row>

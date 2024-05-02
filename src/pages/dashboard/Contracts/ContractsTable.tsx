@@ -4,31 +4,12 @@ import classNames from "classnames";
 import { useAsyncDebounce } from "react-table";
 import { records as data, } from "./data";
 // components 
-import CustomeTable from "../../../components/CustomTable";
+import ContractCustomeTable from "./ContractCustomeTable";
 
 const ContractsTable = (props: any) => {
-    interface TableRecords {
-        id: number;
-        firstName: string;
-        lastName: string;
-        userName: string;
-        sizePerPageList?: {
-            type: String;
-            value: number;
-        }[];
-    }
+
 
     // dummy records
-    const records: TableRecords[] = [
-        { id: 1, firstName: "Mark", lastName: "Otto", userName: "@mdo" },
-        { id: 2, firstName: "Jacob", lastName: "Thornton", userName: "@fat" },
-        { id: 3, firstName: "Larry", lastName: "the Bird", userName: "@twitter" },
-        { id: 3, firstName: "Larry", lastName: "the Bird", userName: "@twitter" },
-        { id: 3, firstName: "Larry", lastName: "the Bird", userName: "@twitter" },
-        { id: 3, firstName: "Larry", lastName: "the Bird", userName: "@twitter" },
-        { id: 3, firstName: "Larry", lastName: "the Bird", userName: "@twitter" },
-    ];
-
     const columns = [
         {
           Header: "#",
@@ -107,7 +88,7 @@ const ContractsTable = (props: any) => {
                             })}
                         </tbody>
                     </Table> */}
-                    <CustomeTable
+                    <ContractCustomeTable
                         columns={columns}
                         data={data}
                         pageSize={8}

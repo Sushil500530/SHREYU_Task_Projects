@@ -11,8 +11,8 @@ import {
 import classNames from "classnames";
 
 // components
-import { Button, Table } from "react-bootstrap";
-import CustomPagination from "./CustomPagination";
+import { Button} from "react-bootstrap";
+import CustomPagination from "../../../components/CustomPagination";
 
 interface GlobalFilterProps {
   preGlobalFilteredRows: any;
@@ -108,17 +108,13 @@ interface TableProps {
   theadClass?: string;
 }
 
-const CustomTable = (props: TableProps) => {
-  const columns = props["columns"] || false;
+const ContractCustomeTable = (props: TableProps) => {
   const isSearchable = props["isSearchable"] || false;
   const isSortable = props["isSortable"] || false;
   const pagination = props["pagination"] || false;
   const isSelectable = props["isSelectable"] || false;
   const isExpandable = props["isExpandable"] || false;
   const sizePerPageList = props["sizePerPageList"] || [];
-
-  console.log(columns, sizePerPageList);
-
 
   let otherProps: any = {};
 
@@ -232,49 +228,23 @@ const CustomTable = (props: TableProps) => {
           className={classNames(
             "table table-centered react-table table-striped table-hover",
             props["tableClass"]
-          )}
-        >
-          <thead className={props["theadClass"]}>
-            {(dataTable.headerGroups || []).map((headerGroup: any) => (
-              <tr {...headerGroup.getHeaderGroupProps()} className="bg-primary text-white">
-                {(headerGroup.headers || []).map((column: any) => (
-                  <th
-                    {...column.getHeaderProps(
-                      column.sort && column.getSortByToggleProps()
-                    )}
-                    className={classNames({
-                      sorting_desc: column.isSortedDesc === true,
-                      sorting_asc: column.isSortedDesc === false,
-                      sortable: column.sort === true,
-                    })}
-                  >
-                    {column.render("Header")}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          {/* <thead className="bg-primary text-white">
+          )} >
+          <thead className="bg-primary text-white table-hover">
             <tr>
               <th className="border-1" style={{ width: "0px" }}>#</th>
               <th className="border-1" style={{ width: "45%" }}>Title</th>
               <th className="border-1" style={{ width: "45%" }}>Discount</th>
               <th className="border-1" style={{ width: "10%" }}>Action</th>
             </tr>
-          </thead> */}
+          </thead>
           <tbody {...dataTable.getTableBodyProps()}>
-            {(rows || []).map((row: any, index:any) => {
+            {(rows || []).map((row: any) => {
               dataTable.prepareRow(row);
               return (
-                <tr {...row.getRowProps()}  key={index}>
-                  <td className="border-1" scope="row">{row.original.id}</td>
-                  <td className="border-1">{row.original.code}</td>
-                  <td className="border-1">{row.original.name}</td>
-                  <td className="border-1">{row.original.phone}</td>
-                  <td className="border-1">{row.original.email}</td>
-                  <td className="border-1">{row.original.total}</td>
-                  <td className="border-1">{row.original.paid}</td>
-                  <td className="border-1">{row.original.due}</td>
+                <tr {...row.getRowProps()}>
+                  <td  className="border-1">{row.original.id}</td>
+                  <td className="border-1">{row.original.title}</td>
+                  <td className="border-1">{row.original.discount}</td>
                   <td className="border-1 d-flex align-items-center justify-content-center gap-2">
                     <Button variant="primary" className="btn-sm d-flex align-items-center justify-content-center " style={{ width: "30px", height: "30px", borderRadius: "100%" }}>
                       <i className="uil uil-edit" style={{ fontSize: "14px" }}></i>
@@ -296,4 +266,4 @@ const CustomTable = (props: TableProps) => {
   );
 };
 
-export default CustomTable;
+export default ContractCustomeTable;

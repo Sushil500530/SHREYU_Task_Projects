@@ -17,20 +17,45 @@ const PatientsTable = () => {
           sort: true,
         },
         {
-          Header: "Title",
-          accessor: "title",
+          Header: "Code",
+          accessor: "code",
           sort: true,
         },
         {
-          Header: "Discount",
-          accessor: "discount",
+          Header: "Name",
+          accessor: "name",
           sort: false,
         },
         {
-          Header: "Action",
-          accessor: "action",
+          Header: "Phone",
+          accessor: "phone",
           sort: true,
         },
+        {
+          Header: "Email",
+          accessor: "email",
+          sort: true,
+        },
+        {
+          Header: "Total",
+          accessor: "total",
+          sort: true,
+        },
+        {
+          Header: "Paid",
+          accessor: "paid",
+          sort: true,
+        },
+        {
+          Header: "Due",
+          accessor: "due",
+          sort: true,
+        },
+        {
+          Header: "Action",
+          accessor: "",
+        },
+        
       ];
       
       const sizePerPageList = [
