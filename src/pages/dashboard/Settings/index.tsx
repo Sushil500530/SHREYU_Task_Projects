@@ -1,92 +1,81 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import { Col, Dropdown, Row,ButtonGroup } from "react-bootstrap";
-import ShreyuDatepicker from "../../../components/Datepicker";
-import { useState } from "react";
-import FeatherIcon from 'feather-icons-react';
+
+import { Card, Col, Row } from "react-bootstrap";
+import PageTitle from "../../../components/PageTitle";
 
 const SettingsDashboard = () => {
-    const [dateRange, setDateRange] = useState<any>([
-        new Date(),
-        new Date().setDate(new Date().getDate() + 7),
-      ]);
-      const [startDate, endDate] = dateRange;
-    
-      /*
-       * handle date change
-       */
-      const onDateChange = (date: Date) => {
-        if (date) {
-          setDateRange(date);
-        }
-      };
+    // const [dateRange, setDateRange] = useState<any>([
+    //     new Date(),
+    //     new Date().setDate(new Date().getDate() + 7),
+    // ]);
+    // const [startDate, endDate] = dateRange;
+
+    // /*
+    //  * handle date change
+    //  */
+    // const onDateChange = (date: Date) => {
+    //     if (date) {
+    //         setDateRange(date);
+    //     }
+    // };
     return (
         <>
+            <PageTitle
+                breadCrumbItems={[
+                    { label: "Dashboard", path: "/dashboard/settings" },
+                    { label: "Settings", path: "/dashboard/settings", active: true },
+                ]}
+                title={"Settings"}
+            />
             <Row>
-                <Col>
-                    <div className="page-title-box">
-                        <h4 className="page-title">Dashboard</h4>
-                        <div className="page-title-right">
-                            <form className="float-md-end mt-3 mt-md-0">
-                                <Row className="g-2">
-                                    <Col md={"auto"}>
-                                        <div className="mb-1 mb-sm-0">
-                                            <ShreyuDatepicker
-                                                selectsRange
-                                                startDate={startDate}
-                                                endDate={endDate}
-                                                hideAddon={true}
-                                                dateFormat={"yyyy/MM/dd"}
-                                                onChange={(date) => {
-                                                    onDateChange(date);
-                                                }}
-                                            />
-                                        </div>
-                                    </Col>
-                                    <Col md={"auto"}>
-                                        <Dropdown as={ButtonGroup} align="end">
-                                            <Dropdown.Toggle
-                                                variant="primary"
-                                                id="dropdown-basic"
-                                                className="cursor-pointer"
-                                            >
-                                                <i className="uil uil-file-alt me-1"></i>Download
-                                                <i className="icon">
-                                                    <FeatherIcon icon="chevron-down" />
-                                                </i>
-                                            </Dropdown.Toggle>
-
-                                            <Dropdown.Menu>
-                                                <Dropdown.Item className="notify-item" href="#/">
-                                                    <FeatherIcon
-                                                        icon="mail"
-                                                        className="icon-dual icon-xs me-2"
-                                                    />
-                                                    <span>Email</span>
-                                                </Dropdown.Item>
-                                                <Dropdown.Item className="notify-item" href="#/">
-                                                    <FeatherIcon
-                                                        icon="printer"
-                                                        className="icon-dual icon-xs me-2"
-                                                    />
-                                                    <span>Print</span>
-                                                </Dropdown.Item>
-                                                <Dropdown.Divider />
-                                                <Dropdown.Item className="notify-item" href="#/">
-                                                    <FeatherIcon
-                                                        icon="file"
-                                                        className="icon-dual icon-xs me-2"
-                                                    />
-                                                    <span>Re-Generate</span>
-                                                </Dropdown.Item>
-                                            </Dropdown.Menu>
-                                        </Dropdown>
-                                    </Col>
-                                </Row>
-                            </form>
-                        </div>
+                <Col md={12} className="px-0 ">
+                    <div className="card bg-primary m-0">
+                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}>Settings</h4>
                     </div>
                 </Col>
-            </Row>
+                <Card>
+                    <Card.Body>
+                        <Row>
+                            <Col lg={3}>
+                                <Col md={12}>
+                                    <div className="card bg-primary m-0">
+                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> General
+                                        </h4>
+                                    </div>
+                                    <div className="card bg-primary m-0">
+                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}>Emails</h4>
+                                    </div>
+                                    <div className="card bg-primary m-0">
+                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> Reports</h4>
+                                    </div>
+                                    <div className="card bg-primary m-0">
+                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> SMS</h4>
+                                    </div>
+                                    <div className="card bg-primary m-0">
+                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> Whatsapp</h4>
+                                    </div>
+                                    <div className="card bg-primary m-0">
+                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> Api Keys</h4>
+                                    </div>
+                                </Col>
+                            </Col>
+                            <Col lg={9}>
+                                <Col md={12}>
+                                    <div className="card bg-primary m-0">
+                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}>General Settings</h4>
+                                    </div>
+                                    <Card>
+                                        <Card.Body>
+                                            <div className="card bg-primary m-0">
+                                                <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}>General Settings</h4>
+                                            </div>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            </Col>
+                        </Row>
+                    </Card.Body>
+                </Card>
+            </Row >
         </>
     );
 };

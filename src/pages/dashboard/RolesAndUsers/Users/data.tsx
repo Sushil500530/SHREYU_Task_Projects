@@ -22,7 +22,7 @@ const records: Records[] = [
         id: 3,
         name: "Alvarado",
         email: "Alvarado@gmail.com",
-        role: ["super_admin"],
+        role: [""],
     },
     {
         id: 4,
