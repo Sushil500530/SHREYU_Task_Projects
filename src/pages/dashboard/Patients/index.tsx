@@ -30,7 +30,7 @@ const PatientsDashboard = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: "Dashboard", path: "/dashboard/Patients" },
+                    { label: "Dashboard", path: "/dashboard/patients" },
                     { label: "Patients", path: "/dashboard/patients", active: true },
                 ]}
                 title={"Patients"}

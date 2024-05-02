@@ -14,7 +14,7 @@ const MidItemBar = () => {
                         Coppy
                     </Button>
                     <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0'>
-                        <i className='uil uil-file-alt text-white fs-4'></i>
+                        <i className='bi bi-file-earmark-x-fill text-white fs-4'></i>
                         Exel
                     </Button>
                     <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0'>
@@ -22,12 +22,12 @@ const MidItemBar = () => {
                         CVS
                     </Button>
                     <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0'>
-                        <i className='uil uil-file-alt text-white fs-4'></i>
+                        <i className='bi bi-file-earmark-pdf-fill text-white fs-4'></i>
                         PDF
                     </Button>
                     <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0 btn-hover'>
                         <i className='uil uil-eye text-white fs-4'></i>
-                        eye
+                        <i className='bi bi-caret-down-fill text-white fs-4'></i>
                     </Button>
 
                 </div>

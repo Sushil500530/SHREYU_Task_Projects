@@ -72,11 +72,12 @@ const PatientsImageLoad = (props: FileUploaderProps) => {
         {({ getRootProps, getInputProps }) => (
           <div>
             <div {...getRootProps()}>
-              <div className="dz-message needsclick p-1 cursor-pointer  bg-primary text-white">
+              <div className="dz-message needsclick cursor-pointer bg-primary text-white">
                 <input {...getInputProps()} />
-                <h5 className="d-flex align-items-center text-white justify-content-center"> 
-                <i className='uil uil-file-alt fs-4'></i>
-                Import/Export.</h5>
+                <h5 className="d-flex align-items-center p-1 text-white justify-content-center">
+                  <i className='uil uil-file-alt fs-4'></i>
+                  Import/Export.
+                </h5>
               </div>
               {props.showPreview &&
                 (selectedFiles || []).map((f, i) => {

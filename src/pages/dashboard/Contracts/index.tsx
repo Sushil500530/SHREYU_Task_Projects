@@ -29,7 +29,7 @@ const ContractsDashboard = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: "Dashboard", path: "/dashboard/Contracts" },
+                    { label: "Dashboard", path: "/dashboard/contracts" },
                     { label: "Contracts", path: "/dashboard/contracts", active: true },
                 ]}
                 title={"Contracts"}
