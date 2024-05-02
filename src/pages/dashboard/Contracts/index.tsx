@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import { Button, Card, Col, Form, Row, } from "react-bootstrap";
 import PageTitle from '../../../components/PageTitle';
 import ContractsTable, { GlobalFilter } from './ContractsTable';
+import FileUploader from '../../../components/FileUploader';
 
 
 
@@ -102,17 +103,35 @@ const ContractsDashboard = () => {
                         </Card.Body>
                         <hr />
                         <>
-                            <div className="d-flex justify-content-between align-items-center px-3 pb-3">
+                            <div className="d-flex justify-content-between align-items-center px-3 pb-3 ">
                                 <div className="d-flex justify-content-start align-items-center gap-1">
                                     Show <Form.Control className='w-25' type="number" placeholder="10" required /> records
                                 </div>
-                                <div className=''>
-                                    <p className="text-center text-muted pt-2 mb-0">
-                                        No Tasks
-                                    </p>
+                                <div className='d-flex align-items-center gap-1 bg-black text-white px-2 rounded-1'>
+                                    <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0'>
+                                        <i className='uil uil-copy text-white fs-4'></i>
+                                        Coppy
+                                    </Button>
+                                    <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0'>
+                                        <i className='uil uil-file-alt text-white fs-4'></i>
+                                        Exel
+                                    </Button>
+                                    <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0'>
+                                        <i className='uil uil-copy text-white fs-4'></i>
+                                        CVS
+                                    </Button>
+                                    <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0'>
+                                        <i className='uil uil-file-alt text-white fs-4'></i>
+                                        PDF
+                                    </Button>
+                                    <Button variant="white" className='btn-sm d-flex align-items-center gap-1 bg-black text-white border-0 btn-hover'>
+                                        <i className='uil uil-eye text-white fs-4'></i>
+                                        eye
+                                    </Button>
+
                                 </div>
                                 <div className="d-flex justify-content-center align-items-center">
-                                 <GlobalFilter setGlobalFilter={5} searchBoxClass="suhil" />
+                                    <GlobalFilter setGlobalFilter={5} searchBoxClass="suhil" />
                                 </div>
                             </div>
                             <ContractsTable />
