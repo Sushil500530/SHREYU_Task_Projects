@@ -25,6 +25,23 @@ const EcommerceDashboard = React.lazy(
 const AnalyticsDashboard = React.lazy(
   () => import("../pages/dashboard/Analytics/")
 );
+// task dashboard 
+const ContractsDashboard = React.lazy(
+  () => import("../pages/dashboard/Contracts")
+);
+const HomeVisitsDashboard = React.lazy(
+  () => import("../pages/dashboard/HomeVisits/")
+);
+const PatientsDashboard = React.lazy(
+  () => import("../pages/dashboard/Patients/")
+);
+const RoleAndUsersDashboard = React.lazy(
+  () => import("../pages/dashboard/RolesAndUsers/")
+);
+const SettingsDashboard = React.lazy(
+  () => import("../pages/dashboard/Settings/")
+);
+
 
 // apps
 const CalendarApp = React.lazy(() => import("../pages/apps/Calendar/"));
@@ -122,6 +139,37 @@ const dashboardRoutes: RoutesProps = {
       element: <AnalyticsDashboard />,
       route: PrivateRoute,
     },
+        // task pages route components 
+        {
+          path: "/dashboard/contracts",
+          name: "Contracts",
+          element: <ContractsDashboard />,
+          route: PrivateRoute,
+        },
+        {
+          path: "/dashboard/patients",
+          name: "Patients",
+          element: <PatientsDashboard />,
+          route: PrivateRoute,
+        },
+        {
+          path: "/dashboard/home-visits",
+          name: "Home Visits",
+          element: <HomeVisitsDashboard />,
+          route: PrivateRoute,
+        },
+        {
+          path: "/dashboard/roles-&-users",
+          name: "Role & Users",
+          element: <RoleAndUsersDashboard />,
+          route: PrivateRoute,
+        },
+        {
+          path: "/dashboard/settings",
+          name: "Settings",
+          element: <SettingsDashboard />,
+          route: PrivateRoute,
+        },
   ],
 };
 

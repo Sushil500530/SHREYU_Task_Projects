@@ -33,6 +33,37 @@ const MENU_ITEMS: MenuItemTypes[] = [
         url: "/dashboard/analytics",
         parentKey: "dashboards",
       },
+        // task routes 
+        {
+          key: "ds-contracts",
+          label: "Contracts",
+          url: "/dashboard/contracts",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-patients",
+          label: "Patients",
+          url: "/dashboard/patients",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-home-visits",
+          label: "Home Visits",
+          url: "/dashboard/home-visits",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-roles-&-users",
+          label: "Roles & Users",
+          url: "/dashboard/roles-&-users",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-settings",
+          label: "Settings ",
+          url: "/dashboard/settings",
+          parentKey: "dashboards",
+        },
     ],
   },
   { key: "apps", label: "Apps", isTitle: true },
@@ -382,6 +413,37 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
         url: "/dashboard/analytics",
         parentKey: "dashboards",
       },
+        // task horizontal_menu items 
+        {
+          key: "ds-contracts",
+          label: "Contracts",
+          url: "/dashboard/contracts",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-patients",
+          label: "Patients",
+          url: "/dashboard/patients",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-home-visits",
+          label: "Home Visits",
+          url: "/dashboard/home-visits",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-roles-&-users",
+          label: "Roles & Users",
+          url: "/dashboard/roles-&-users",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-settings",
+          label: "Settings ",
+          url: "/dashboard/settings",
+          parentKey: "dashboards",
+        },
     ],
   },
   {
@@ -696,6 +758,37 @@ const TWO_COl_MENU_ITEMS: MenuItemTypes[] = [
         url: "/dashboard/analytics",
         parentKey: "dashboards",
       },
+        // task two_col_menu_items
+        {
+          key: "ds-contracts",
+          label: "Contracts",
+          url: "/dashboard/contracts",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-patients",
+          label: "Patients",
+          url: "/dashboard/patients",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-home-visits",
+          label: "Home Visits",
+          url: "/dashboard/home-visits",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-roles-&-users",
+          label: "Roles & Users",
+          url: "/dashboard/roles-&-users",
+          parentKey: "dashboards",
+        },
+        {
+          key: "ds-settings",
+          label: "Settings ",
+          url: "/dashboard/settings",
+          parentKey: "dashboards",
+        },
     ],
   },
   {
