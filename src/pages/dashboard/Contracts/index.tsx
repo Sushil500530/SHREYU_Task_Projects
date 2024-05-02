@@ -51,7 +51,7 @@ const ContractsDashboard = () => {
                                 </Col>
                             </div>
                         </Card.Body>
-                        <hr />
+                        <hr className="my-0 mb-3" />
                         <MidItemBar />
                         <ContractsTable />
                     </Card>

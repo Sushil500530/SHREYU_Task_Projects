@@ -1,10 +1,14 @@
-import { useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
-import PageTitle from "../../../components/PageTitle";
-import MidItemBar from "../Contracts/MidItemBar";
-import ContractsTable from "../Contracts/ContractsTable";
+import { useState } from "react";
+import PageTitle from "../../../../components/PageTitle";
+import MidItemBar from "../../Contracts/MidItemBar";
+import RoleTable from "./RoleTable";
+// components 
 
-const RoleAndUsersDashboard = () => {
+
+
+
+const RolesDashboard = () => {
     const [newTaskDetails, setNewTaskDetails] = useState<any>(null);
     // add task 
     const newTask = (status: string, queue: string) => {
@@ -17,14 +21,16 @@ const RoleAndUsersDashboard = () => {
         // setNewTaskModal(true);
     };
 
+
+
     return (
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: "Dashboard", path: "/dashboard/contracts" },
-                    { label: "Contracts", path: "/dashboard/contracts", active: true },
+                    { label: "Dashboard", path: "/dashboard/roles-&-users/roles" },
+                    { label: "Patients", path: "/dashboard/roles-&-users/roles", active: true },
                 ]}
-                title={"Contracts"}
+                title={"Roles"}
             />
             <Row>
                 <Col xs={12}>
@@ -32,7 +38,7 @@ const RoleAndUsersDashboard = () => {
                         <Card.Body>
                             <div className="float-sm-start">
                                 <label className="form-check-label">
-                                    Contracts Table
+                                Roles Table
                                 </label>
                             </div>
                             <div className="float-sm-end">
@@ -43,14 +49,18 @@ const RoleAndUsersDashboard = () => {
                                 </Col>
                             </div>
                         </Card.Body>
-                        <hr className="my-0 mb-3" />
+                        <hr className="m-0" />
+                        <Card.Body>
+                            {/* <PatientsImageLoad /> */}
+                        </Card.Body>
                         <MidItemBar />
-                        <ContractsTable />
+                        <RoleTable />
                     </Card>
                 </Col>
             </Row>
+
         </>
     );
 };
 
-export default RoleAndUsersDashboard;
+export default RolesDashboard;

@@ -45,7 +45,7 @@ const HomeVisitsDashboard = () => {
                                 </Col>
                             </div>
                         </Card.Body>
-                        <hr />
+                        <hr className="m-0" />
                         <Card.Body>
                             <Filtered />
                         </Card.Body>

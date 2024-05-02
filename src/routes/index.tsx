@@ -3,6 +3,7 @@ import { Navigate, Route, RouteProps } from "react-router-dom";
 
 // components
 import PrivateRoute from "./PrivateRoute";
+import RolesDashboard from "../pages/dashboard/RolesAndUsers/Roles";
 // import Root from "./Root";
 
 // lazy load all the views
@@ -140,37 +141,51 @@ const dashboardRoutes: RoutesProps = {
       element: <AnalyticsDashboard />,
       route: PrivateRoute,
     },
-        // task pages route components 
+    // task pages route components 
+    {
+      path: "/dashboard/contracts",
+      name: "Contracts",
+      element: <ContractsDashboard />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/dashboard/patients",
+      name: "Patients",
+      element: <PatientsDashboard />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/dashboard/home-visits",
+      name: "Home Visits",
+      element: <HomeVisitsDashboard />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/dashboard/roles-&-users",
+      name: "Role & Users",
+      element: <RoleAndUsersDashboard />,
+      route: PrivateRoute,
+      children: [
         {
-          path: "/dashboard/contracts",
-          name: "Contracts",
-          element: <ContractsDashboard />,
+          path: "/dashboard/roles-&-users/roles",
+          name: "Roles",
+          element: <RolesDashboard />,
           route: PrivateRoute,
         },
         {
-          path: "/dashboard/patients",
-          name: "Patients",
-          element: <PatientsDashboard />,
+          path: "/dashboard/roles-&-users/users",
+          name: "Users",
+          element: <EmailDetail />,
           route: PrivateRoute,
         },
-        {
-          path: "/dashboard/home-visits",
-          name: "Home Visits",
-          element: <HomeVisitsDashboard />,
-          route: PrivateRoute,
-        },
-        {
-          path: "/dashboard/roles-&-users",
-          name: "Role & Users",
-          element: <RoleAndUsersDashboard />,
-          route: PrivateRoute,
-        },
-        {
-          path: "/dashboard/settings",
-          name: "Settings",
-          element: <SettingsDashboard />,
-          route: PrivateRoute,
-        },
+      ],
+    },
+    {
+      path: "/dashboard/settings",
+      name: "Settings",
+      element: <SettingsDashboard />,
+      route: PrivateRoute,
+    },
   ],
 };
 

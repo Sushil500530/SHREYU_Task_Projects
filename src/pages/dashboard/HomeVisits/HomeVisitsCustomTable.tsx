@@ -12,8 +12,9 @@ import classNames from "classnames";
 
 
 // components
-import { Button, } from "react-bootstrap";
+import { Button, Col, Dropdown, ButtonGroup } from "react-bootstrap";
 import CustomPagination from "../../../components/CustomPagination";
+import FeatherIcon from 'feather-icons-react';
 
 interface GlobalFilterProps {
     preGlobalFilteredRows: any;
@@ -273,20 +274,61 @@ const HomeVisitsCustomTable = (props: TableProps) => {
                                     <td className="border-1">{row.original.address}</td>
                                     <td className="border-1">{row.original.visitDate}</td>
                                     <td className="border-1">
-                                        <i className="bi bi-check-all fs-3 text-success"></i>
+                                        <i className="bi bi-check-all fs-2 text-success fw-bold"></i>
                                     </td>
                                     <td className="border-1">
-                                        <div className="form-check form-switch w-100">
-                                            <input className="form-check-input  w-100 p-2" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                                            <label className="form-check-label  w-100" htmlFor="flexSwitchCheckDefault"></label>
+                                        <div className="form-check form-switch w-100 ">
+                                            <input className="form-check-input w-100 p-2 " type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                            <label className="form-check-label w-100" htmlFor="flexSwitchCheckDefault"></label>
                                         </div>
                                     </td>
                                     <td className="border-1 d-flex align-items-center justify-content-center gap-2 px-1">
-                                        <Button variant="primary" className="btn-sm d-flex align-items-center justify-content-center gap-1" style={{ width: "100px", height: "30px", borderRadius: "20px" }}>
-                                            <i className="bi bi-gear-fill" style={{ fontSize: "14px" }}></i>
-                                            Action
-                                            <i className="bi bi-caret-down-fill" style={{ fontSize: "14px" }}></i>
-                                        </Button>
+                                        <Col md={"auto"}>
+                                            <Dropdown as={ButtonGroup} align="end">
+                                                <Dropdown.Toggle
+                                                    variant="primary"
+                                                    id="dropdown-basic"
+                                                    className="btn-sm d-flex align-items-center justify-content-center gap-2 rounded-pill" style={{ width: "100px", height: "30px", borderRadius: "20px" }}
+                                                >
+                                                    <Button variant="primary" className="btn-sm d-flex align-items-center justify-content-center gap-1 rounded-pill" >
+                                                        <i className="bi bi-gear-fill" style={{ fontSize: "14px" }}></i>
+                                                        Action
+                                                        <i className="bi bi-caret-down-fill" style={{ fontSize: "14px" }}></i>
+                                                    </Button>
+                                                </Dropdown.Toggle>
+
+                                                <Dropdown.Menu>
+                                                    <Dropdown.Item className="notify-item" href="#/">
+                                                        <FeatherIcon
+                                                            icon="eye"
+                                                            className="icon-dual icon-xs me-2"
+                                                        />
+                                                        <span>Show</span>
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item className="notify-item" href="#/">
+                                                        <FeatherIcon
+                                                            icon="edit"
+                                                            className="icon-dual icon-xs me-2"
+                                                        />
+                                                        <span>Edit</span>
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item className="notify-item" href="#/">
+                                                        <FeatherIcon
+                                                            icon="trash-2"
+                                                            className="icon-dual icon-xs me-2"
+                                                        />
+                                                        <span>Delet</span>
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item className="notify-item" href="#/">
+                                                        <FeatherIcon
+                                                            icon="filter"
+                                                            className="icon-dual icon-xs me-2"
+                                                        />
+                                                        <span>Clear group tests</span>
+                                                    </Dropdown.Item>
+                                                </Dropdown.Menu>
+                                            </Dropdown>
+                                        </Col>
                                     </td>
                                 </tr>
                             );

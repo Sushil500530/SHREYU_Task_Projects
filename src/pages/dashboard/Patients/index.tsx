@@ -51,7 +51,7 @@ const PatientsDashboard = () => {
                                 </Col>
                             </div>
                         </Card.Body>
-                        <hr />
+                        <hr className="m-0" />
                         <Card.Body>
                             <PatientsImageLoad />
                         </Card.Body>
