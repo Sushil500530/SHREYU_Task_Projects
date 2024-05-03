@@ -1,7 +1,3 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Row } from "react-bootstrap";
-import classNames from "classnames";
 import { NavLink } from "react-router-dom";
 
 
@@ -25,7 +21,7 @@ const SettingsMenu = () => {
                     Message
                 </NavLink>
                 <NavLink
-                    to="/dashboard/settings/reports"
+                    to="/"
                     className={({ isActive }) =>
                         isActive
                             ? "position-relative d-flex gap-1 align-items-center justify-content-start me-3 bg-primary text-white fs-5 px-3 py-1"
@@ -35,7 +31,7 @@ const SettingsMenu = () => {
                     Reports
                 </NavLink>
                 <NavLink
-                    to="/dashboard/settings/emails"
+                    to="/"
                     className={({ isActive }) =>
                         isActive
                             ? "position-relative d-flex gap-1 align-items-center justify-content-start me-3 bg-primary text-white fs-5 px-3 py-1"
@@ -45,7 +41,7 @@ const SettingsMenu = () => {
                     Emails
                 </NavLink>
                 <NavLink
-                    to="/dashboard/settings/sms"
+                    to="/"
                     className={({ isActive }) =>
                         isActive
                             ? "position-relative d-flex gap-1 align-items-center justify-content-start me-3 bg-primary text-white fs-5 px-3 py-1"
@@ -55,7 +51,7 @@ const SettingsMenu = () => {
                     SMS
                 </NavLink>
                 <NavLink
-                    to="/dashboard/settings/whatsapp"
+                    to="/"
                     className={({ isActive }) =>
                         isActive
                             ? "position-relative d-flex gap-1 align-items-center justify-content-start me-3 bg-primary text-white fs-5 px-3 py-1"
@@ -65,7 +61,7 @@ const SettingsMenu = () => {
                     Whatsapp
                 </NavLink>
                 <NavLink
-                    to="/dashboard/settings/api-key"
+                    to="/"
                     className={({ isActive }) =>
                         isActive
                             ? "position-relative d-flex gap-1 align-items-center justify-content-start me-3 bg-primary text-white fs-5 px-3 py-1"
