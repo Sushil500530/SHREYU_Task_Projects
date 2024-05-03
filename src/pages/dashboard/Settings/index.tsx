@@ -3,8 +3,10 @@ import { useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import PageTitle from "../../../components/PageTitle";
 // dummy data
-import SettingsShow from "./SettingsShow";
+import SettingsShow from "./GeneralSettingsShow";
 import SettingsMenu from "./SettingsMenu";
+import { Outlet } from "react-router-dom";
+import GeneralSettingsShow from "./GeneralSettingsShow";
 
 
 const SettingsDashboard = () => {
@@ -75,50 +77,17 @@ const SettingsDashboard = () => {
                     <Card.Body>
                         <Row>
                             {/* <Col lg={3}> */}
-                                <Row>
-                                    <Col lg={5} xxl={3}>
-                                        <SettingsMenu  />
-                                    </Col>
-                                    <Col lg={7} xxl={9}>
-                                        <SettingsShow />
-                                    </Col>
-                                </Row>
-                                {/* <Col md={12}>
-                                    <div className="card bg-primary m-0">
-                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> General
-                                        </h4>
-                                    </div>
-                                    <div className="card bg-primary m-0">
-                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}>Emails</h4>
-                                    </div>
-                                    <div className="card bg-primary m-0">
-                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> Reports</h4>
-                                    </div>
-                                    <div className="card bg-primary m-0">
-                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> SMS</h4>
-                                    </div>
-                                    <div className="card bg-primary m-0">
-                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> Whatsapp</h4>
-                                    </div>
-                                    <div className="card bg-primary m-0">
-                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}> Api Keys</h4>
-                                    </div>
-                                </Col> */}
-                            {/* </Col> */}
-                            {/* <Col lg={9}>
-                                <Col md={12}>
-                                    <div className="card bg-primary m-0">
-                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}>General Settings</h4>
-                                    </div>
-                                    <Card>
-                                        <Card.Body>
-                                            <div className="card bg-primary m-0">
-                                                <h4 className=" ps-3 text-white fw-normal" style={{ padding: "3px" }}>General Settings</h4>
-                                            </div>
-                                        </Card.Body>
-                                    </Card>
+                            <Row>
+                                <Col lg={5} xxl={3}>
+                                    <SettingsMenu />
                                 </Col>
-                            </Col> */}
+                                <Col lg={7} xxl={9}>
+                                    <div className="card bg-primary m-0">
+                                        <h4 className=" ps-3 text-white fw-normal" style={{ padding: "1px" }}>General Settings</h4>
+                                    </div>
+                                    <GeneralSettingsShow />
+                                </Col>
+                            </Row>
                         </Row>
                     </Card.Body>
                 </Card>

@@ -191,6 +191,14 @@ const dashboardRoutes: RoutesProps = {
       name: "Settings",
       element: <SettingsDashboard />,
       route: PrivateRoute,
+      children: [
+        {
+          path: "/dashboard/settings/message",
+          name: "Settings",
+          element: <SettingsDashboard />,
+          route: PrivateRoute,
+        },
+      ],
     },
   ],
 };
